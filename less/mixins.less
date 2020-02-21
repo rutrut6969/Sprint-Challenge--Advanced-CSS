@@ -1,1 +1,72 @@
 // Mixins Here
+.flex(@dir:row, @just:center, @ali:center) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @just;
+  align-items: @ali;
+}
+.cust-btn(@color, @bg-color) {
+  color: @color;
+  background-color: @bg-color;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 20%;
+
+  &:hover {
+    cursor: pointer;
+    color: @bg-color;
+    background-color: @color;
+    transition: 0.3s ease-in;
+    border: 1px solid @bg-color;
+    .wig();
+  }
+}
+
+@mobile: (max-width: 500px);
+
+.btn-mobile(@size, @radius) {
+  width: 100%;
+  height: 50px;
+  font-size: @size;
+  border-radius: @radius;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wig {
+  0% {
+    transform: rotate(0deg);
+  }
+  3% {
+    transform: rotate(-2deg);
+  }
+  4% {
+    transform: rotate(2deg);
+  }
+  5% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wig() {
+  animation: wig 3s infinite;
+}
+
+.fade(@time) {
+  animation-name: fade;
+  animation-duration: @time;
+}
+
+.overlay() {
+  background-color: @bg-color;
+}
