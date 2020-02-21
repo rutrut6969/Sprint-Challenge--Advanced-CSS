@@ -169,6 +169,8 @@ nav {
   width: 100%;
   background-color: #F6F6F6;
   color: #454A59;
+  border-bottom: 1px solid #F1F1F1;
+  box-shadow: 2px 2px 10px #454A59;
 }
 nav .logo h1 {
   font-size: 5rem;
@@ -238,6 +240,20 @@ nav .links a:hover {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  color: #F6F6F6;
+  background-color: #454A59;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 20%;
+}
+.home .walk .walk-text .btn:hover {
+  cursor: pointer;
+  color: #454A59;
+  background-color: #F6F6F6;
+  transition: 0.3s ease-in;
 }
 .home .walk .walk-img {
   width: 46%;

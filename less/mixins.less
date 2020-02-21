@@ -5,3 +5,18 @@
   justify-content: @just;
   align-items: @ali;
 }
+.cust-btn(@color, @bg-color) {
+  color: @color;
+  background-color: @bg-color;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 20%;
+
+  &:hover {
+    cursor: pointer;
+    color: @bg-color;
+    background-color: @color;
+    transition: 0.3s ease-in;
+  }
+}
